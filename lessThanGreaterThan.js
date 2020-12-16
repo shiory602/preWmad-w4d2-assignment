@@ -6,7 +6,6 @@
 //your code here
 
 const arrBetween = function(num1, num2, arr) {
-
 	let result = [];
 
 	for (let i = 0; i < arr.length; i++) {

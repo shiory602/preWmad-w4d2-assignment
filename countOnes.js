@@ -6,8 +6,10 @@
 // your code here
 const countOnes = function(arr) {
     let count = 0;
-    for (let i = 0; i < arr.length; i++) {
-        for (let j = 0; j < arr[i].length; j++) {
+
+    for (let i = 0; i < arr.length; i++) {  // first loop
+        
+        for (let j = 0; j < arr[i].length; j++) {  // second loop
             if (arr[i][j] === 1) {
                 count++;
             }

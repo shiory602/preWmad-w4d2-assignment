@@ -7,9 +7,17 @@
 
 
 // your code here
+// const concat = function(arr1, arr2) {
+// 	let line = arr1 + "," + arr2;	// would be 'string' :(
+// 	return line;
+// }
+
+// solution
 const concat = function(arr1, arr2) {
-	let line = arr1 + "," + arr2;
-	return line;
+	for (let i = 0; i < arr2.length; i++) {
+		arr1.push(arr2[i]);
+		return arr1;
+	}
 }
 
 console.log(concat([1, 3, 5], [2, 6, 8])); 

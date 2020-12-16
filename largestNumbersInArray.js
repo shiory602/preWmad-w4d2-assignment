@@ -4,33 +4,51 @@
 // Return a new (single) array with the largest numbers of each.
 
 //you code here
-
-const findLargestNums = function(arr) {
+// const findLargestNums = function(arr) {
 	
-	let largestNumber0 = arr[0][0];
-	let largestNumber1 = arr[1][0];
-	let largestNumber2 = arr[2][0];
+// 	let largestNumber0 = arr[0][0];
+// 	let largestNumber1 = arr[1][0];
+// 	let largestNumber2 = arr[2][0];
 
-		for (i = 0; i < arr[0].length; i++) {
-			if (arr[0][i] > largestNumber0) {
-				largestNumber0 = arr[0][i];
+// 		for (i = 0; i < arr[0].length; i++) {
+// 			if (arr[0][i] > largestNumber0) {
+// 				largestNumber0 = arr[0][i];
+// 			}
+// 		}
+
+// 		for (i = 0; i < arr[1].length; i++) {
+// 			if (arr[1][i] > largestNumber1) {
+// 				largestNumber1 = arr[1][i];
+// 			}
+// 		}
+
+// 		for (i = 0; i < arr[2].length; i++) {
+// 			if (arr[2][i] > largestNumber2) {
+// 				largestNumber2 = arr[2][i];
+// 			}
+// 		}
+
+// 	return largestNumber0 + "," + largestNumber1 + "," + largestNumber2;
+
+// }	// would be 'string'
+
+
+// solution
+const findLargestNums = function (arr) {
+	let result = [];
+
+	for (i=0; i < arr.length; i++) {
+		let maxValue = arr[i][0];
+		// let maxValue = -Infinity;
+		for (j= 1; j < arr[i].length; j++) {
+		// for (j= 0; j < arr[i].length; j++) {
+			if (arr[i][j] > maxValue) {
+				maxValue = arr[i][j];
 			}
 		}
-
-		for (i = 0; i < arr[1].length; i++) {
-			if (arr[1][i] > largestNumber1) {
-				largestNumber1 = arr[1][i];
-			}
-		}
-
-		for (i = 0; i < arr[2].length; i++) {
-			if (arr[2][i] > largestNumber2) {
-				largestNumber2 = arr[2][i];
-			}
-		}
-
-	return largestNumber0 + "," + largestNumber1 + "," + largestNumber2;
-
+		result.push(maxValue);
+	}
+	return result;
 }
 
 
