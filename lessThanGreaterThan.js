@@ -1,9 +1,24 @@
+// DONE
+
 // Create a function that takes two numbers num1, num2, and an array arr and 
 //returns an array containing all the numbers in arr greater than num1 and less than num2.
 
 //your code here
 
+const arrBetween = function(num1, num2, arr) {
 
+	let result = [];
+
+	for (let i = 0; i < arr.length; i++) {
+
+		if (arr[i] > num1 && arr[i] < num2) {
+			result.push(arr[i]);
+		}
+
+	}
+
+	return result;
+}
 
 
 console.log(arrBetween(3, 8, [1, 5, 95, 0, 4, 7])); 

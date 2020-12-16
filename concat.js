@@ -1,3 +1,5 @@
+// DONE
+
 // Create a function to concatenate (add) two integer arrays. it will take in two arrays, 
 // and return one new one.
 
@@ -5,7 +7,10 @@
 
 
 // your code here
-
+const concat = function(arr1, arr2) {
+	let line = arr1 + "," + arr2;
+	return line;
+}
 
 console.log(concat([1, 3, 5], [2, 6, 8])); 
 // ➞ [1, 3, 5, 2, 6, 8]
